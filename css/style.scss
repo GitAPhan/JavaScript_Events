@@ -2,3 +2,54 @@
 @import "color";
 @import "header";
 @import "footer";
+
+body {
+    position   : relative;
+    display    : grid;
+    place-items: center;
+    height     : 100vh;
+
+    >p {
+        position: absolute;
+        z-index: 10;
+        color: black;
+        text-shadow: 1px 1px 2px white;
+        opacity: 1;
+        font-weight: bolder;
+        font-size: 16px;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+.visible {
+    opacity: 1;
+}
+
+#circle {
+    position        : absolute;
+    width           : 25px;
+    height          : 25px;
+    background-color: black;
+    border-radius   : 25px;
+    border          : 2px white solid;
+    transition      : all 1s ease-in-out;
+    top             : calc(50% - 12.5px);
+    left            : calc(50% - 12.5px);
+}
+
+#interactionCenter {
+    display      : grid;
+    place-items  : center;
+    row-gap      : 10px;
+    padding      : 20px;
+    border       : black solid 1px;
+    border-radius: 25px;
+    transition   : all 1s ease-in-out;
+}
+
+p {
+    opacity: 0;
+}
